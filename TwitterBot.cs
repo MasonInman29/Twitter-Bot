@@ -12,12 +12,12 @@ namespace TwitterBotForm
 {
     public partial class TwitterBot : Form
     {
-        //string APIKey = "CE8Iif4GMkHoelVweWstM6Imw";
-        //string APISecret = "V4axJrborVl4qqz4gxUtqRjxy6le33nL1uPlVuqKwO52ZI6ZeC";
-        //string AccessToken = "1466516857897340928-99bVelYChHMjaRD4Pdg0BXBMsr6QTM";
-        //string AccessSecret = "vvhWqXXUuucJwqrsMyuEByqaAdMucjnUq5r3GHtdwM2hu";
+        string APIKey = "PUTAPIKEYHERE";
+        string APISecret = "PUTAPISECRETTOKENHERE";
+        string AccessToken = "PUTACCESSTOKENHERE";
+        string AccessSecret = "PUTACCESSSECRETTOKENHERE";
 
-        Bot bot = new Bot("CE8Iif4GMkHoelVweWstM6Imw", "V4axJrborVl4qqz4gxUtqRjxy6le33nL1uPlVuqKwO52ZI6ZeC", "1466516857897340928-99bVelYChHMjaRD4Pdg0BXBMsr6QTM", "vvhWqXXUuucJwqrsMyuEByqaAdMucjnUq5r3GHtdwM2hu");
+        Bot bot = new Bot(APIKey, APISecret, AccessToken, AccessSecret);
         string[] quotes = {
                             "Love For All, Hatred For None. – Khalifatul Masih III",
                             "Change the world by being yourself. – Amy Poehler",
@@ -88,28 +88,12 @@ namespace TwitterBotForm
         {
             this.Close();
         }
-        //To do Somehow add some loops(looking through the input?) and a second form (posting a picture?)**************************************
+        
         private void TweetTB_TextChanged(object sender, EventArgs e)
         {
 
         }
-        /*private bool NotJustSpaces(string str)
-        {
-            bool flag = false;
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (!str[i].Equals(" "))
-                {
-                    flag = true;
-                }
-                if (flag && i != str.Length -1 && (str[i].Equals(".") || str[i].Equals(";") || str[i].Equals(":") || str[i].Equals(",") || 
-                    str[i].Equals("<") || str[i].Equals(">") || str[i].Equals("\"")))
-                {
-                    flag = false;
-                }
-            }
-            return flag;
-        }*/
+        
         private async void SendTweetBTN_Click(object sender, EventArgs e)
         {
             try //try catch statement is here along with the the if statement to provide more precise error messages
