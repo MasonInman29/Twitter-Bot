@@ -12,6 +12,7 @@ namespace TwitterBotForm
 {
     public partial class TwitterBot : Form
     {
+        //keys have been changed since posting for security purposes
         string APIKey = "PUTAPIKEYHERE";
         string APISecret = "PUTAPISECRETTOKENHERE";
         string AccessToken = "PUTACCESSTOKENHERE";
